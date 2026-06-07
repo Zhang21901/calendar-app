@@ -1,13 +1,11 @@
 @echo off
 echo 🚀 Starting Calendar App...
 echo.
-
-start "Backend" cmd /k "cd /d D:\calendar-app\backend && python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000"
-timeout /t 3 /nobreak >nul
-start "Frontend" cmd /k "cd /d D:\calendar-app\frontend && npm run dev"
-
+echo    Frontend + Backend: http://localhost:8000
+echo    API Docs:           http://localhost:8000/docs
 echo.
-echo ✅ Backend:  http://localhost:8000
-echo ✅ Frontend: http://localhost:5173
+echo    Close this window to stop.
 echo.
-echo Close the two terminal windows to stop.
+
+cd /d D:\calendar-app\backend
+python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
