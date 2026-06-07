@@ -3,7 +3,7 @@ import { useApp } from '../../context';
 import { X, TrendingUp, Target, Clock, AlertTriangle } from 'lucide-react';
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
-  LineChart, Line, PieChart, Pie, Cell, RadialBarChart, RadialBar,
+  LineChart, Line, RadialBarChart, RadialBar,
 } from 'recharts';
 import * as api from '../../api';
 import type { DashboardSummary, DailyHoursItem, HeatmapItem, MigrationTrendItem } from '../../types';

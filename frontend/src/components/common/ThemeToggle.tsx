@@ -1,6 +1,6 @@
 import { useApp } from '../../context';
 import type { ThemeName } from '../../types';
-import { Sun, Moon, Palette } from 'lucide-react';
+import { Sun, Moon } from 'lucide-react';
 
 const THEMES: { key: ThemeName; label: string; color: string }[] = [
   { key: 'blueWhite', label: '蓝白', color: '#6366f1' },

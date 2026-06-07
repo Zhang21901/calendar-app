@@ -15,7 +15,7 @@ export function useDragAndDrop() {
     data.action = altKey ? 'copy' : 'move';
   }, []);
 
-  const handleDragOver = useCallback((event: DragOverEvent) => {
+  const handleDragOver = useCallback((_event: DragOverEvent) => {
     // Visual feedback is handled by CSS via useDroppable isOver state
   }, []);
 

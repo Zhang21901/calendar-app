@@ -8,7 +8,7 @@ import { DndContext, PointerSensor, KeyboardSensor, useSensor, useSensors } from
 import { useDragAndDrop } from '../../hooks/useDragAndDrop';
 
 export function AppLayout() {
-  const { viewMode, dashboardOpen, setViewMode, toggleDashboard, toggleDarkMode } = useApp();
+  const { viewMode, dashboardOpen, setViewMode, toggleDarkMode } = useApp();
   const { handleDragStart, handleDragEnd, handleDragOver } = useDragAndDrop();
 
   const sensors = useSensors(

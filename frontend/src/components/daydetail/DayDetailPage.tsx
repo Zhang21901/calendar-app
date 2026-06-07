@@ -11,7 +11,7 @@ import * as api from '../../api';
 
 export function DayDetailPage() {
   const { focusedDate, setViewMode } = useApp();
-  const { getTasksForDate, updateTask, updateProgress, deleteTask, refresh, categories } = useTasks();
+  const { getTasksForDate, updateProgress, deleteTask, refresh, categories } = useTasks();
   const { activeTimer, elapsedSeconds } = useTimer();
 
   const tasks = getTasksForDate(focusedDate);
@@ -89,7 +89,6 @@ export function DayDetailPage() {
           <h3 className="text-xs font-semibold mb-2" style={{ color: 'var(--color-text-secondary)' }}>时间轴</h3>
           {Array.from({ length: 24 }, (_, i) => {
             const hour = String(i).padStart(2, '0');
-            const timeSlot = `${hour}:00`;
             const tasksAtTime = tasks.filter(t => t.scheduled_time?.startsWith(hour));
 
             return (

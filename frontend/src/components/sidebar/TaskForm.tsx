@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useTasks } from '../../context';
-import type { Category, TaskCreate, Task } from '../../types';
+import type { Category, Task } from '../../types';
 import { X } from 'lucide-react';
 
 interface Props {
@@ -99,7 +99,7 @@ export function TaskForm({ onClose, categories, initialDate, task }: Props) {
               <label className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>优先级</label>
               <select
                 value={priority}
-                onChange={e => setPriority(e.target.value)}
+                onChange={e => setPriority(e.target.value as typeof priority)}
                 className="w-full px-3 py-2 rounded-lg border text-sm mt-1"
                 style={{ borderColor: 'var(--color-border)', background: 'var(--color-bg-primary)', color: 'var(--color-text-primary)' }}
               >

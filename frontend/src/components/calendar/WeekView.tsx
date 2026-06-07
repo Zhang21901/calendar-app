@@ -1,5 +1,5 @@
 import { useApp } from '../../context';
-import { getWeekDays, dayOfWeek, isToday, formatShort } from '../../utils/dateUtils';
+import { getWeekDays, dayOfWeek, formatShort } from '../../utils/dateUtils';
 import { DayCard } from './DayCard';
 
 export function WeekView() {
